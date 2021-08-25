@@ -8,4 +8,3 @@
 - Uvod v GPIO
 - Upravljanje z LED preko spletnega vmesnika
 - Individualne vaje
-

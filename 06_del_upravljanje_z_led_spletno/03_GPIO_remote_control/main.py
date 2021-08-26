@@ -1,5 +1,10 @@
 from flask import Flask, render_template, request
 
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+GPIO.setup(17, GPIO.OUT)
 
 app = Flask(__name__)
 
@@ -21,8 +26,23 @@ def interface_pins():
         data["2"] = "off"
     else:
         data["2"] = request.args["2"]
+
+    control_pins(data)
+    
     return render_template("main.html", data=data)
 	
+
+
+def control_pins(data):
+    print("CONTROLING PINS: ", data)
+    for pin, action in data.items():
+        if pin_num == "1":
+            if action == "on":
+                GPIO.output(17, GPIO.HIGH)
+            else:
+                GPIO.output(17, GPIO.LOW)
+
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=5000, debug=True)
 

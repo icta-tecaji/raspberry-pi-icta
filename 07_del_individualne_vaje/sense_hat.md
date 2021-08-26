@@ -4,7 +4,7 @@ Eden izmed popularnejših razvijalskih dodatkov za RaspberryPi je Sense HAT - el
 z 8x8 matriko LED, žiroskopom, pospeškometrom, magnetometrom, termometrom, barometrom,
 in higrometrom.
 
-![alt text](https://si.farnell.com/productimages/large/en_GB/2483095-40.jpg)
+![alt text](./images/sense_hat.jpg)
 
 
 Za priklop vtaknite najprej distančnik v SenseHAT (s spodnje strani). RaspberryPi ugasnite (iztaknite USB kabel), in SenseHAT nataknite tako, kot na sliki spodaj. Stevilo priključkov na SenseHAT-u in RaspberryPi je enako, tako da morajo biti vsi pini zasedeni.

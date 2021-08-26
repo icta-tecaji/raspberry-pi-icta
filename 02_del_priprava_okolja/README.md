@@ -2,7 +2,7 @@
 
 ## Namestitev Raspbian Linux
 
-Namestitev Raspbian ni podobna namestitvi klasičnega operacijskega sistema (vstavitev instalacijskega medija, grafično instalacijsko okolje, nastavitve, ter ponovni zagon v novi sistem) - namestitev opravimo z prenosom pripravljene slike na SD kartico. Pripravljena slika vsebuje celotno kopijo “izvorne” sd kartice (vsebuje tudi podatke o morebitnih particijah, MBR, ter vso vsebino datotečnega sistema). Za kopiranje slike na kartico moramo prepisati celotno kartico (tudi datotečni sistem), zato potrebujemo poseben program, ki direktno prepisuje kartico.
+Namestitev Raspbian ni podobna namestitvi klasičnega operacijskega sistema (vstavitev instalacijskega medija, grafično instalacijsko okolje, nastavitve, ter ponovni zagon v novi sistem) - namestitev opravimo z prenosom pripravljene slike na SD kartico. Pripravljena slika vsebuje celotno kopijo “izvorne” sd kartice (vsebuje tudi podatke o morebitnih particijah, MBR, ter vso vsebino datotečnega sistema). Za kopiranje slike na kartico moramo prepisati celotno kartico (tudi datotečni sistem), zato potrebujemo poseben program, ki direktno prepisuje kartico.
 
 1. Prenesemo sliko z operacijskim sistemom iz strani: https://www.raspberrypi.org/software/operating-systems/
     - Na spletni strani obstajata dve verziji - celotna in minimalna. Celotna vsebuje več programske opreme in celoten grafični vmesnik - taka je primerna za direktno uporabo. Minimalna vsebuje samo minimalni nabor programske opreme, in je namenjena za strežnike in/ali zahtevnejše uporabnike, ki želijo sami izbirati dodatno programsko opremo.

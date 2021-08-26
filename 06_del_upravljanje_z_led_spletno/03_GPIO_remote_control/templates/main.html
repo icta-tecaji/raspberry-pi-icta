@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<head>
+	</head>
+	
+	<body>
+        {% for pin in data %}
+        <div>
+            <p>PIN {{ pin }}</p>
+            {% if data[pin] == "off" %}
+            <a href="/interface?{{ pin }}=on">ON</a>
+            {% elif data[pin] == "on" %}
+            <a href="/interface?{{ pin }}=off">OFF</a>
+            {% else %}
+            <a href="/interface">Something is wrong</a>
+            {% endif %}
+        </div>
+        {% endfor  %}
+
+	</body>
+</html>

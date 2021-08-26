@@ -6,9 +6,9 @@
         {% for pin in data %}
         <div>
             <p>PIN {{ pin }}</p>
-            {% if data[pin] == "off" %}
+            {% if data[pin]["state"] == "off" %}
             <a href="/interface?{{ pin }}=on">ON</a>
-            {% elif data[pin] == "on" %}
+            {% elif data[pin]["state"] == "on" %}
             <a href="/interface?{{ pin }}=off">OFF</a>
             {% else %}
             <a href="/interface">Something is wrong</a>

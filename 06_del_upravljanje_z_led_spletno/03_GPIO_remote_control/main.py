@@ -4,7 +4,10 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-GPIO.setup(17, GPIO.OUT)
+pins = {"1": 17,
+        "2": 27}
+for pin in pins:
+    GPIO.setup(pins[pin], GPIO.OUT)
 
 app = Flask(__name__)
 
@@ -36,11 +39,11 @@ def interface_pins():
 def control_pins(data):
     print("CONTROLING PINS: ", data)
     for pin, action in data.items():
-        if pin_num == "1":
+        if pin_num in pins:
             if action == "on":
-                GPIO.output(17, GPIO.HIGH)
+                GPIO.output(pins[pin_num], GPIO.HIGH)
             else:
-                GPIO.output(17, GPIO.LOW)
+                GPIO.output(pins[pin_num], GPIO.LOW)
 
 
 if __name__ == "__main__":

@@ -39,7 +39,7 @@ def interface_pins():
 def control_pins(data):
     print("CONTROLING PINS: ", data)
     for pin, action in data.items():
-        if pin_num in pins:
+        if pin in pins:
             if action == "on":
                 GPIO.output(pins[pin_num], GPIO.HIGH)
             else:

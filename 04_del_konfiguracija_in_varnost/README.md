@@ -15,7 +15,7 @@ Pri povezavi nas vpraša za geslo.
 
 > Pazimo, da imamo močno geslo! 
 
-Sejo prekinemo z ukazom exit. Protokol SSH uporablja TCP port 22.
+Sejo prekinemo z ukazom `exit`. Protokol SSH uporablja TCP port 22.
 
 ### Konfugracija SSH brez dodatnega ekrana
 
@@ -27,8 +27,8 @@ RP se lahko usposobi tudi brez uporabe ekrana, tipkovnice in miške - se pravi v
 * Preko računalnika poiščemo IP našega RP
 * Preko Putty (windows) programa se povežemo preko SSH povezave na naš RP
 * Default username in geslo sta:
-*    * Username: pi
-*    * Password: raspberry
+    - Username: pi
+    - Password: raspberry
 
 
 ## Pridobimo kodo za tečaj iz računa Github

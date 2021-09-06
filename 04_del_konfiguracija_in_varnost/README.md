@@ -18,10 +18,18 @@ Pri povezavi nas vpraša za geslo.
 Sejo prekinemo z ukazom exit. Protokol SSH uporablja TCP port 22.
 
 ### Konfugracija SSH brez dodatnega ekrana
-- @Balki TODO
-- Na hitr midva pokaževa kako se usposobi RP, če nimaš ekrana (.ssh datoteko nrdiš in pol sshajat gor itd..)..
-- Ampak ne rabjo vsi takrt z nama sledit temu..
-- Kle bi rabl dodatno SD kartico da jo lahko tm takoj formatiramo in na sveže naložimo sistem
+
+RP se lahko usposobi tudi brez uporabe ekrana, tipkovnice in miške - se pravi v *headless* načinu.
+
+* Potem, ko imamo SD kartico ustvarjeno jo odpremo in znotraj *boot* dela ustvarimo prazno **ssh.txt** datoteko.
+* Ko se RP zažene in vidi ssh datoteko bo samodejno odprl SSH komunikacijo
+* RP sedaj preko kabla povežemo s svojim routerjem
+* Preko računalnika poiščemo IP našega RP
+* Preko Putty (windows) programa se povežemo preko SSH povezave na naš RP
+* Default username in geslo sta:
+*    * Username: pi
+*    * Password: raspberry
+
 
 ## Pridobimo kodo za tečaj iz računa Github
 Da boste lahko lažje sledili tečaju lahko vsebino in kodo naložite na RaspberryPi s kloniranjem pripravljenega Github repozitorija.

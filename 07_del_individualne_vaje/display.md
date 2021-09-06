@@ -18,7 +18,9 @@ Skripta nas najprej vpraša, če želimo nadaljevati (’y’ + enter), sama bo 
 Primeri uporabe so v novonastalem direktoriju, vanj se premaknemo z:
 - `cd /home/pi/Pimoroni/displayotron/examples/dothat/basic`
 
-Poženite priložene primere. Do primerov lahko dostopate tudi prek grafičnega vmesnika v istem direktoriju. Ob dvokliku na `.py` skripto izberite `Execute` in `terminal`.
+Poženite priložene primere. Do primerov lahko dostopate tudi prek grafičnega vmesnika v istem direktoriju. Ob dvokliku na `.py` skripto izberite `Execute in terminal`.
+
+Zagon iz terminala: `./<IME_SKRIPTE>.py`
 
 Nekaj primerov je tudi en direktorij višje v direktoriju “Advanced”. V primeru da vam pokaže import error, odprite datoteko v urejevalniku besedil (desni klik, text editor) premaknite `sys.path.append(‘‘../../’’)`.
 pred `from plugins import ...` vrstice:

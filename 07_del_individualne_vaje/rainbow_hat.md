@@ -12,7 +12,6 @@ Navodila za namestitev (tudi na linku zgoraj za copy-paste):
 git clone https://github.com/allocom/rainbow-hat
 cd rainbow-hat/
 sudo apt-get install python-dev python-setuptools
-cd ../..
 cd library/RainbowHat
 sudo python setup.py install
 cd ../..
@@ -23,9 +22,9 @@ cd ../..
 Pomaknite se v enega izmed direktorijev z primeri in poženite primere (primere poženemo s `sudo
 python ime_primera.py`):
 ```bash
-cd /home/pi/rainbow-hat/examples
+cd ./examples
 #...ali...
-cd /home/pi/rainbow-hat/examples/hat
+cd ./examples/hat
 ```
 
 Na ekran lahko rišete tudi ročno, tako da poženete python (sudo python) in uporabite naslednje ukaze:

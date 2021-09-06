@@ -9,8 +9,8 @@ Za orientacijo si pomagajte s sliko:
 
 Priklopite nazaj napajanje, počakajte da se sistem prižge, ter odprite novo terminalno okno.
 
-Za uporabo kamere, morate najprej pognati sudo raspi-config, ter v menuju Interfaceing
-options vklopiti podporo za kamero.
+Za uporabo kamere, morate najprej pognati `sudo raspi-config`, ter v menuju `Interfaceing
+options` vklopiti podporo za kamero.
 
 Za zajem slike uporabimo ukaz `raspistill`, naprimer:
 - `raspistill -o slika.jpg`

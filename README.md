@@ -7,4 +7,7 @@
 - Konfiguracija, omrežne nastavitve in varnost
 - Uvod v GPIO
 - Upravljanje z LED preko spletnega vmesnika
+- Smart house platforma
+- Pi-hole
+- Media Center
 - Individualne vaje

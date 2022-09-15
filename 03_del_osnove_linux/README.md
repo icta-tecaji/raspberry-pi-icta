@@ -15,3 +15,6 @@
 - shutdown
 - ifconfig
 - iwconfig
+
+- namestimo docker https://www.simplilearn.com/tutorials/docker-tutorial/raspberry-pi-docker
+- https://docs.docker.com/engine/install/debian/

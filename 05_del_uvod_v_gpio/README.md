@@ -6,24 +6,25 @@
 3. RaspberryPi prižgite nazaj.
 
 Stanje in pregled pinov lahko preverimo z ukazom:
-- `gpio readall`
+- `raspi-gpio get`
 
 GPIO17 pin (interna številka 0) nastavimo na output - tako da nastavljamo logično stanje (napetost3.3V ali 0V) - pri input jo beremo.
-- `gpio mode 0 out`
+- `raspi-gpio set 17 op`
 
 Nastavimo stanje na 1 (3.3V):
-- `gpio write 0 1`
+- `raspi-gpio set 17 dh`
 - LED dioda se prižge.
 
 Stanje nastavimo nazaj na 0 (0V):
-- `gpio write 0 0`
+- `raspi-gpio set 17 dl`
 
-Ukaza lahko uporabimo tudi v skripti:
-- `while true; do gpio write 0 1; sleep 0.5; gpio write 0 0; sleep 0.5; done`
+Ukaza lahko uporabimo tudi v skripti (utripanje):
+- `while true; do raspi-gpio set 17 dh; sleep 0.5; raspi-gpio set 17 dl; sleep 0.5; done`
+- `raspi-gpio set 17 dl`
 
 
 ### Vaja 1: Led osnovno
-- Premaknemo se v mapo `05_del_uvod_v_gpio`
+- Premaknemo se v mapo `cd 05_del_uvod_v_gpio`
 - Uporabimo program: `01_led_osnovno.py`
 - Zagon:
     - `python3 01_led_osnovno.py`

@@ -10,4 +10,5 @@
 - Smart house platforma
 - Pi-hole
 - Media Center
+- Owncloud ?  
 - Individualne vaje

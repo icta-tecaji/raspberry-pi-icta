@@ -12,6 +12,7 @@ Pi-hole je DNS *sinkhole* (črna luknja), ki varuje naprave pred nezaželeno vse
 - **Modern**: blocks ads over both IPv4 and IPv6
 - **Free**: open-source software which helps ensure you are the sole person in control of your privacy
 
+Gradiva:
 - [Uradna spletna stran](https://pi-hole.net/)
 - [Navodila za Docker namestitev](https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker)
 - [Dokumentacija](https://docs.pi-hole.net/)

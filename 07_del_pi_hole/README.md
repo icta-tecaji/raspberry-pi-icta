@@ -56,5 +56,5 @@ Postopek:
 1. Dodamo URL v blocklisto (Login > Adlists > Paste list URL in "Address" field, add comment > Click "Add")
 2. Posodobimo Gravity (Tools > Update Gravity > Click "Update")
 
-Po končani uporabi Pi-hole ustavimo z ukazaom: `sudo docker compose down -v`
+Po končani uporabi Pi-hole ustavimo z ukazom: `sudo docker compose down -v`
 

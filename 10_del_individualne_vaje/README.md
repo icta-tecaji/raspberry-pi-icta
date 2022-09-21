@@ -1,4 +1,4 @@
-# Del 7: Individualne vaje
+# Del 10: Individualne vaje
 
 Navodila za individualne vaje:
 - [Display-O-tron HAT](./display.md)

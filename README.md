@@ -1,4 +1,6 @@
-# raspberry-pi-icta
+# ICTA: Raspberry Pi
+
+Izrazito praktična delavnica, ki predstavi zelo poceni alternativo dragim profesionalnim napravam in strežnikom, ki s širokim naborom zmožnosti rešuje probleme in najde prostor v (skoraj) vsakem okolju.
 
 ## Vsebina
 - [Del 1: Uvod v delo z RaspberryPI](./01_del_uvod_v_rpi/README.md)
@@ -8,6 +10,6 @@
 - [Del 5: Uvod v GPIO](./05_del_uvod_v_gpio/README.md)
 - [Del 6: Upravljanje z LED preko spletnega vmesnika](./06_del_upravljanje_z_led_spletno/README.md)
 - [Del 7: Pi-hole](./07_del_pi_hole/README.md)
-- Owncloud
-- Smart house platforma
-- Individualne vaje
+- [Del 8: Owncloud](./08_del_owncloud/README.md)
+- [Del 9: Smart house platforma](./09_del_smart_house_platforma/README.md)
+- [Del 10: Individualne vaje](./10_del_individualne_vaje/README.md)

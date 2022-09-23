@@ -23,7 +23,7 @@
 
 ## Namestitev Docker
 
-Docker nam bo olajšal
+Docker nam bo olajšal namestitev programske opreme, ki jo bomo potrebovali skozi tečaj.
 
 [Install Docker Engine on Debian](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script):
 - `DRY_RUN=1`

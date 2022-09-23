@@ -19,7 +19,7 @@ Gradiva:
 
 ## Namestitev
 
-Pred namestitvijo moramo prirpaviti naslednje zadeve katere lahko najdete [tukaj](https://docs.pi-hole.net/main/prerequisites/):
+Pred namestitvijo moramo pripraviti sledeče zadeve katere lahko najdete [tukaj](https://docs.pi-hole.net/main/prerequisites/):
 - Določiti RPi statičen IP naslov (to smo storili že v delu 4)
 - Na požarnem zidu odpremo naslednja vrata (pazimo, da je RPi v lokalnem omrežju!):
     - `sudo ufw allow 80/tcp`
@@ -40,7 +40,7 @@ Pi-hole lahko [namestimo na več različnih načinov](https://docs.pi-hole.net/m
 
 Ker Pi-hole zaganjamo v Dockerju moramo v nastavitvah spremeniti naslednje: `Settings -> DNS -> Interface settings -> Potentially dangerous options -> Permit all origins`.
 
-Naslednji korak je da napram na lokalnem omrežju omogočimo uporabo Pi-Hole. To lahko naredimo na [več načinov](https://docs.pi-hole.net/main/post-install/). 
+Naslednji korak je da napravam na lokalnem omrežju omogočimo uporabo Pi-Hole. To lahko naredimo na [več načinov](https://docs.pi-hole.net/main/post-install/). 
 
 > [Podrobnejši opis nastavitev naprav](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 

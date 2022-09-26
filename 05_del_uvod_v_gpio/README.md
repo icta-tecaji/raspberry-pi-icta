@@ -1,7 +1,9 @@
 # Del 5: Uvod v GPIO
 
+Za lažje delo s Raspberry Pi pini lahko uporabimo [spletna orodja](https://pinout.xyz/), ki podpirajo interaktivni opis pinov.
+
 ## Uporaba GPIO pinov
-1. RaspberryPi izklopite (odklopite USB napajalni kabel). Pazite na statično elektriko (dotaknite se nečesa ozemljenega, naprimer kovinskega dela mize), in zatem USB-A konektorja na RaspberryPi. LED diodo priklopite med Ground pin (09) in GPIO17 (GPIO GEN0) (11). To sta četrti in pet pin v levi vrsti.
+1. RaspberryPi izklopite (odklopite USB napajalni kabel). Pazite na statično elektriko (dotaknite se nečesa ozemljenega, naprimer kovinskega dela mize), in zatem USB-A konektorja na RaspberryPi. LED diodo priklopite med Ground pin (09) in GPIO17 (GPIO GEN0) (11). To sta peti in šesti pin v levi vrsti.
 2. Pazite na polariteto - na pozitivni strani (anodi) diode je vezan upor - povezava gre z GPIO17 (/Pin11/GPIO GEN0) prek upora na led diodo in nazaj na ground.
 3. RaspberryPi prižgite nazaj.
 

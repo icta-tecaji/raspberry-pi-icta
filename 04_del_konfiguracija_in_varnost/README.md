@@ -46,6 +46,7 @@ napisana.
 - `sudo ufw allow 22`
 - `sudo ufw allow 80`
 - `sudo ufw allow 443`
+- `sudo ufw allow 9443` (dostop do Portainer nadzorne plošče)
 
 Omogočimo UFW:
 - `sudo ufw enable`

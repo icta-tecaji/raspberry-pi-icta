@@ -4,7 +4,7 @@
 
 ## Namestitev in uporaba
 
-Na naslednji [povezavi](https://doc.owncloud.com/server/10.11/) lahko najdemo vse informacije o ownCloud Classic Server.
+Na naslednji [povezavi](https://doc.owncloud.com/server/10.12/) lahko najdemo vse informacije o ownCloud Classic Server.
 
 V našem primeru bomo ownCloud namestili s pomočjo Docker-ja. 
 

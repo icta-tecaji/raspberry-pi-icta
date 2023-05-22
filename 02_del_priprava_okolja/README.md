@@ -6,7 +6,7 @@ Namestitev Raspbian ni podobna namestitvi klasičnega operacijskega sistema (vst
 
 1. Prenesemo sliko z operacijskim sistemom iz strani: https://www.raspberrypi.com/software/operating-systems/
     - Na spletni strani obstajata dve verziji -  *with desktop* in *Lite*. Desktop verzija vsebuje več programske opreme in celoten grafični vmesnik - taka je primerna za direktno uporabo. V našem primeru izberemo Lite verzijo, saj ne bomo potrebovali grafičnega vmesnika.
-    - Izberemo 64-bitno verzijo: `Raspberry Pi OS (64-bit) - Raspberry Pi OS Lite, Debian version: 11 (bullseye)`. 
+    - Izberemo [64-bitno verzijo](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2023-05-03/2023-05-03-raspios-bullseye-arm64-lite.img.xz): `Raspberry Pi OS (64-bit) - Raspberry Pi OS Lite, Debian version: 11 (bullseye)`. 
     - Datoteko shranimo na računalnik.
 2. Namestimo orodje **Raspberry Pi Imager** iz strani https://www.raspberrypi.org/software/, ki nam omogoča pisanje slike na SD kartico.
 3. Vstavimo SD kartico v računalnik.
@@ -38,11 +38,11 @@ network={
 4. Če je vse potekalo pravilno, bi se moral RPi zagnati v kakšni minuti.
 
 ## Upravljanje na daljavo (SSH)
-Za upravljanje na daljavo uporabimo protokol SSH: `ssh <uporabnisko ime>@<IP naslov>`
+Za upravljanje na daljavo uporabimo protokol SSH: `ssh <uporabnisko ime>@<IP naslov>`. V našem primeru je uporabniško ime `pi` in IP naslov najdemo na ruterju.
 
 > Primer: `ssh pi@192.168.3.127`
 
-Pri povezavi nas vpraša za geslo (npr. delavnica). 
+Pri povezavi nas vpraša za geslo (za naš primer: delavnica). 
 
 > Pazimo, da imamo močno geslo! 
 

@@ -7,7 +7,7 @@ GPIO pine lahko kontroliramo tudi čez spletni vmesnik.
 It’s useful to start enjoying GPIOs and also to debug some circuits without writing any line of code. It also allows to control your Pi’s GPIOs over Internet, so it’s a good starting point for home remote control.
 
 **[Namestitev](https://thepiguy.altervista.org/webiopi-rp3/)**:
-- `cd ~/raspberry-pi-icta/05_del_uvod_v_gpio/`
+- `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/`
 - `tar xvzf WebIOPi-0.7.1.tar.gz`
 - `cd WebIOPi-0.7.1/`
 - Verzija na uradni strani ima težave z delovanjem na Raspberry Pi 3B+. Zato uporabimo spodnji popravek.
@@ -34,16 +34,19 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
 ### Zagon programa
 1. Program: `01_hello_world`:
     - V tem programu zaženemo Flask server, ki vrne "Hello World" ob obisku strani.
+    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/01_hello_world`
     - Zagon: `python3 hello_world.py`
     - Obisk strani: `<IP_NAPRAVE>:8080`
 
 2. Program: `02_datetime_templates`:
     - V tem programu zaženemo Flask server, ki vrne trenuten datum in čas na serverju.
+    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/02_datetime_templates`
     - Zagon: `python3 main.py`
     - Obisk strani: `<IP_NAPRAVE>:8080`
 
 3. Program: `03_GPIO_remote_control`:
     - Povežemo 2 LED na 11 in 13 pin. S pomočjo spletnega vmesnika lahko nadzorujemo pine.
+    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/03_GPIO_remote_control`
     - Zagon: `python3 main.py`
     - Obisk strani: `<IP_NAPRAVE>:8080/interface`
 

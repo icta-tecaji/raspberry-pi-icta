@@ -27,7 +27,7 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
 - Namestimo PIP (package installer for Python), ki nam omogoča nameščanje zunanjih Python knjižnic: `sudo apt install -y python3-pip`
 - Posodobimmo Flask knjižnico: `python3 -m pip install flask --upgrade`
     - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
-    - https://flask.palletsprojects.com/en/2.2.x/
+    - https://flask.palletsprojects.com/en/2.3.x/
 - Odpremo port `8080` na požarnem zidu, da lahko dostopamo do Flask serverja.
     - Zaženemo: `sudo ufw allow 8080`
 

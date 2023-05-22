@@ -4,7 +4,7 @@
 Da boste lahko lažje sledili tečaju lahko vsebino in kodo naložite na RaspberryPi s kloniranjem pripravljenega Github repozitorija.
 - se premaknemo v mapo uporabnika pi: `cd /home/pi`
 - Namestimo git: `sudo apt update -y` in `sudo apt install -y git`
-- Zaženemo: `git clone https://github.com/leon11s/raspberry-pi-icta.git`
+- Zaženemo: `git clone https://github.com/icta-tecaji/raspberry-pi-icta.git`
 
 ## Nastavitev statičnega IP naslova
 Če uporabljamo RaspberryPi prek oddaljenega dostopa (SSH), ali kot strežnik, ali pa ga le želimo imeti bolj pod kontrolo, moramo nastaviti statični IP naslov.

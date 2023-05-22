@@ -26,9 +26,9 @@
 Docker nam bo olajšal namestitev programske opreme, ki jo bomo potrebovali skozi tečaj.
 
 [Install Docker Engine on Debian](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script):
-- `DRY_RUN=1`
+- `sudo apt update`
 - `curl -fsSL https://get.docker.com -o get-docker.sh`
-- `sudo sh get-docker.sh`
+- `sudo sh ./get-docker.sh`
 - `sudo systemctl enable docker.service`
 - `sudo systemctl enable containerd.service`
 - `sudo docker run hello-world`

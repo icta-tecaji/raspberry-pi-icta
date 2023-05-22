@@ -40,7 +40,7 @@ Docker nam bo olajšal namestitev programske opreme, ki jo bomo potrebovali skoz
 
 [Namestitev](https://docs.portainer.io/start/install/server/docker/linux) je zelo enostavna. Vse kar potrebujemo so naslednji ukazi:
 - `sudo docker volume create portainer_data`
-- `sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
+- `sudo docker run -d -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
 - `sudo docker ps`
 
 Odpremo povezavo URL: `https://<RPI_IP>:9443/` in ustvarimo nov uporabniški račun.

@@ -21,7 +21,7 @@ Uporabimo upor z 10 kOhm med Vcc in signal pinom. Povezave:
 Podatke bomo iz senzorja brali s pomočjo Python skripte `main.py`. Pred zagonom skripte moramo namestiti dodatno knjižnico, ki nam nudi povezavo s senzorjem DHT11:
 - `pip install Adafruit_Python_DHT`
 - Premaknemo se v mapo: `cd ~/raspberry-pi-icta/09_del_smart_house_platforma`
-- Zaženemo program: `python main.py`
+- Zaženemo program: `python3 main.py`
 
 Po zagonu bi morali na URL nalsovu `http://<RPI_IP>:5000/metrics` videti izpis trenutnih metrik.
 

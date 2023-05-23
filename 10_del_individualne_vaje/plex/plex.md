@@ -6,4 +6,4 @@ Docker image source: https://hub.docker.com/r/linuxserver/plex
 
 ## Run
 - Move to folder: `cd ~/raspberry-pi-icta/10_del_individualne_vaje/plex/`
-- Run Docker Compose File: `sudo docker-compose up -d`
+- Run Docker Compose File: `sudo docker compose up -d`

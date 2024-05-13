@@ -8,26 +8,31 @@ Za lažje delo s Raspberry Pi pini lahko uporabimo [spletna orodja](https://pino
 3. RaspberryPi prižgite nazaj.
 
 Stanje in pregled pinov lahko preverimo z ukazom:
-- `raspi-gpio get`
+- `sudo pinctrl`
+- Pomoč: `sudo pinctrl help`
 
 GPIO17 pin (interna številka 0) nastavimo na output - tako da nastavljamo logično stanje (napetost3.3V ali 0V) - pri input jo beremo.
-- `raspi-gpio set 17 op`
+- `sudo pinctrl set 17 op`
 
 Nastavimo stanje na 1 (3.3V):
-- `raspi-gpio set 17 dh`
+- `sudo pinctrl set 17 dh`
 - LED dioda se prižge.
 
 Stanje nastavimo nazaj na 0 (0V):
-- `raspi-gpio set 17 dl`
+- `sudo pinctrl set 17 dl`
 
 Ukaza lahko uporabimo tudi v skripti (utripanje):
-- `while true; do raspi-gpio set 17 dh; sleep 0.5; raspi-gpio set 17 dl; sleep 0.5; done`
-- `raspi-gpio set 17 dl`
+- `while true; do sudo pinctrl set 17 dh; sleep 0.5; sudo pinctrl set 17 dl; sleep 0.5; done`
+- `sudo pinctrl set 17 dl`
 
 
 ### Vaja 1: Led osnovno
-- Premaknemo se v mapo `cd 05_del_uvod_v_gpio`
-- Uporabimo program: `01_led_osnovno.py`
+- Premaknemo se v mapo `cd ~/raspberry-pi-icta/05_del_uvod_v_gpio`
+- Za vaje bomo uporabili knjižnico `gpiozero`. [Primeri](https://gpiozero.readthedocs.io/en/latest/recipes.html).
+
+> GPIO Zero is installed by default in the Raspberry Pi OS desktop image, Raspberry Pi OS Lite image, and the Raspberry Pi Desktop image for PC/Mac, all available from raspberrypi.org. This library uses Broadcom (BCM) pin numbering for the GPIO pins, as opposed to physical (BOARD) numbering. Unlike in the RPi.GPIO library, this is not configurable.
+
+- Uporabimo program: `cat 01_led_osnovno.py`
 - Zagon:
     - `python3 01_led_osnovno.py`
 

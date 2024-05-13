@@ -1,11 +1,18 @@
-import RPi.GPIO as GPIO
+from gpiozero import LED
+from time import sleep
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.OUT)
+led_01 = LED(17)
 
-p = GPIO.PWM(17, 0.5)
-p.start(1)
-input('Press enter to stop!')  
-print("Stopping!")
-p.stop()
-GPIO.cleanup()
+try:
+    print("Press CTRL+C to stop the program!")
+    print()
+    while True:
+        led_01.on()
+        print("LED on")
+        sleep(2)
+        led_01.off()
+        print("LED off")
+        sleep(2)
+except KeyboardInterrupt:
+    print("Stopping!")
+    led_01.off()

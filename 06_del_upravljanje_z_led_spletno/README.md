@@ -2,7 +2,7 @@
 
 GPIO pine lahko kontroliramo tudi čez spletni vmesnik.
 
-## WebIOPi spletni vmesnik
+<!-- ## WebIOPi spletni vmesnik (not supported on Raspberry Pi 5)
 [WebIOPi](http://webiopi.trouch.com/) is a web application which allows you to control your Raspberry Pi’s GPIO. Just install it on your Pi, and use any browser from your network.
 It’s useful to start enjoying GPIOs and also to debug some circuits without writing any line of code. It also allows to control your Pi’s GPIOs over Internet, so it’s a good starting point for home remote control.
 
@@ -18,7 +18,7 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
 - Now reboot the Pi.
 - Start WebIOPi by running the command: `sudo /etc/init.d/webiopi start`
 - If you want WebIOPi to start automatically on boot, run: `sudo update-rc.d webiopi defaults`
-- Once WebIOPi is up and running, you can point your browser to `http://<yourraspberryIP>:8000` (replace yourraspberryIP with the actual IP address or domain name of your Raspberry Pi) and log in using the `webiopi` username and the `raspberry` password.
+- Once WebIOPi is up and running, you can point your browser to `http://<yourraspberryIP>:8000` (replace yourraspberryIP with the actual IP address or domain name of your Raspberry Pi) and log in using the `webiopi` username and the `raspberry` password. -->
 
 
 ## Flask spletni vmesnik

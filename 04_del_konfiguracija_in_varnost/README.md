@@ -3,7 +3,8 @@
 ## Pridobimo kodo za tečaj iz računa Github
 Da boste lahko lažje sledili tečaju lahko vsebino in kodo naložite na RaspberryPi s kloniranjem pripravljenega Github repozitorija.
 - se premaknemo v mapo uporabnika pi: `cd /home/pi`
-- Namestimo git: `sudo apt update -y` in `sudo apt install -y git`
+- Preverimo ali imamo nameščen git: `git --version`
+    - Namestimo git v primeru, da ga nimamo nameščenega z ukazom: `sudo apt update -y` in `sudo apt install -y git`
 - Zaženemo: `git clone https://github.com/icta-tecaji/raspberry-pi-icta.git`
 
 ## Nastavitev statičnega IP naslova
@@ -11,20 +12,16 @@ Da boste lahko lažje sledili tečaju lahko vsebino in kodo naložite na Raspber
 
 Z ukazom `ifconfig` preverimo trenutne omrežne nastavitve.
 
-Statični IP (za razliko od ostalih Linux distribucij baziranih na Debian-u) nastavljamo v dhcpcd.conf datoteki:
-- `sudo nano /etc/dhcpcd.conf`
-
-Vpraša nas za geslo, nato se odpre datoteka z mrežnimi nastavitvami. Večina vsebine je zakomentirane. Dodeljen vam bo IP iz 192.168.X.2/24 - 192.168.X.20/24 obsega (pazite da ne uporabite istega kot kdo drug v skupini). Za statično nastavitev IPja na začetek datoteke vpišemo:
-```bash
-interface wlan0
-static ip_address=192.168.X.X/24
-static routers=192.168.X.1
-static domain_name_servers=8.8.8.8
-```
-
-RaspberryPi ponovno zaženemo (ukaz `sudo reboot`), in z ukazom `ifconfig` preverimo, če je nastavljen pravilen IP.
-Povezljivost lahko preveri tudi sosed z ukazom ping:
-- `ping <vaš IP naslov>`
+Statični IP nastavljamo s pomočjo orodja `nmcli`:
+- Get connection name: `sudo nmcli c`
+- Dodeljen vam bo IP iz 192.168.0.100/24 - 192.168.0.150/24 obsega (pazite da ne uporabite istega kot kdo drug v skupini).
+- `sudo nmcli c mod preconfigured ipv4.addresses 192.168.0.X/24 ipv4.method manual`
+- `sudo nmcli con mod preconfigured ipv4.gateway 192.168.0.1`
+- `sudo nmcli con mod preconfigured ipv4.dns "192.168.0.1"`
+- `sudo nmcli c down preconfigured && sudo nmcli c up preconfigured` (povezava se bo prekinila)
+- V novem terminalu preverimo povezljivost z novim IP naslovom (`ssh pi@192.168.0.X`)
+- Po ponovni prijavi z ukazom `ifconfig` preverimo, če je nastavljen pravilen IP.
+- Povezljivost lahko preveri tudi sosed z ukazom ping: `ping <vaš IP naslov>`
 
 ## Požarni zid
 Za nastavljanje požarnega zidu uporabljamo UFW (Uncomplicated Firewall), ki vpredstavlja enostaven vmesnik za program `iptables`. `iptables` je zelo močno in fleksibilno orodje, vendar lahko predstavlja težavo začetnikom.
@@ -41,8 +38,7 @@ Nastavimo privzete možnosti:
 - `sudo ufw default allow outgoing`
 
 Omogočimo dostop za SSH, HTTP in HTTPS za vse IPje:
-- Pravila se izvajajo v vrstnem redu, kot so
-napisana.
+- Pravila se izvajajo v vrstnem redu, kot so napisana.
 - `sudo ufw allow 22`
 - `sudo ufw allow 80`
 - `sudo ufw allow 443`

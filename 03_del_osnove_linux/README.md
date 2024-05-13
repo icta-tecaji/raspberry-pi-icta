@@ -29,9 +29,10 @@ Docker nam bo olajšal namestitev programske opreme, ki jo bomo potrebovali skoz
 - `sudo apt update`
 - `curl -fsSL https://get.docker.com -o get-docker.sh`
 - `sudo sh ./get-docker.sh`
-- `sudo systemctl enable docker.service`
-- `sudo systemctl enable containerd.service`
-- `sudo docker run hello-world`
+- `sudo systemctl enable docker.service` (če želimo, da se Docker zažene ob zagonu)
+- `sudo systemctl enable containerd.service` (če želimo, da se Docker zažene ob zagonu)
+- `sudo docker run hello-world` (preverimo, če je Docker pravilno nameščen)
+- `rm get-docker.sh`
 
 
 ## Namestitev Portainer

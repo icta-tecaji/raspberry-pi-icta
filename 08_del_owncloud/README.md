@@ -4,11 +4,11 @@
 
 ## Namestitev in uporaba
 
-Na naslednji [povezavi](https://doc.owncloud.com/server/10.12/) lahko najdemo vse informacije o ownCloud Classic Server.
+Na naslednji [povezavi](https://doc.owncloud.com/server/10.14/) lahko najdemo vse informacije o ownCloud Classic Server.
 
 V našem primeru bomo ownCloud namestili s pomočjo Docker-ja. 
 
-> Natančna navodila za Docker namestitev lahko najdete [tukaj](https://doc.owncloud.com/server/10.12/admin_manual/installation/docker/).
+> Natančna navodila za Docker namestitev lahko najdete [tukaj](https://doc.owncloud.com/server/10.14/admin_manual/installation/docker/).
 
 Namestitev poteka na sledeči način:
 1. Premaknemo se v mapo: `cd ~/raspberry-pi-icta/08_del_owncloud`
@@ -17,7 +17,7 @@ Namestitev poteka na sledeči način:
 
 Po uspešni namestitvi preverimo ali so vsi kontejnerji zagnani z ukazom: `sudo docker compose ps`. V primeru, da ima še kakšen kontejner status `running (starting)` lahko preverimo podrobnejše loge s ukazom `sudo docker compose logs --follow owncloud`.
 
-Gremo na naslov `http://<RPI_IP>` v brskalniku in se prijavimo v ownCloud (usr: admin, pass: admin).
+Gremo na naslov `http://<RPI_IP>:8080` v brskalniku in se prijavimo v ownCloud (usr: admin, pass: admin).
 
 > V realnih primerih moramo uporabiti varnejše geslo!
 

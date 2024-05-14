@@ -19,4 +19,5 @@ Izrazito praktična delavnica, ki predstavi zelo poceni alternativo dragim profe
 - [Del 7: Pi-hole](./07_del_pi_hole/README.md)
 - [Del 8: Owncloud](./08_del_owncloud/README.md)
 - [Del 9: Smart house platforma](./09_del_smart_house_platforma/README.md)
-- [Del 10: Individualne vaje](./10_del_individualne_vaje/README.md)
+- [Del 10: Plex Media Server](./10_Plex_Media_Server/README.md)
+- [Del 11: Individualne vaje](./11_del_individualne_vaje/README.md)

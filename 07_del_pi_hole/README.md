@@ -25,10 +25,6 @@ Pred namestitvijo moramo pripraviti sledeče zadeve katere lahko najdete [tukaj]
     - `sudo ufw allow 80/tcp`
     - `sudo ufw allow 53/tcp`
     - `sudo ufw allow 53/udp`
-    - `sudo ufw allow 67/tcp`
-    - `sudo ufw allow 67/udp`
-    - `sudo ufw allow 546:547/udp`
-
 
 Pi-hole lahko [namestimo na več različnih načinov](https://docs.pi-hole.net/main/basic-install/). V našem primeru bomo uporabili Docker saj omogoča najenostavnejšo namestitev:
 - Premaknemo se v mapo: `cd ~/raspberry-pi-icta/07_del_pi_hole`

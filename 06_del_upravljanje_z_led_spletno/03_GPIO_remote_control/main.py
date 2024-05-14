@@ -4,12 +4,11 @@ from gpiozero import LED
 led_01 = LED(17)
 led_02 = LED(27)
 
-
 pins = {"1": {"pin": led_01, "state": "off"}, "2": {"pin": led_02, "state": "off"}}
 
 for pin in pins.values():
 	pin["pin"].off()
-	
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -36,9 +35,3 @@ def control_pins(data):
 				pins[pin]["pin"].on()
 			else:
 				pins[pin]["pin"].off()
-
-
-if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=8080, debug=True)
-
-

@@ -24,30 +24,36 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
 ## Flask spletni vmesnik
 
 ### Namestitev knjižnic in predpriprava
-- Namestimo PIP (package installer for Python), ki nam omogoča nameščanje zunanjih Python knjižnic: `sudo apt install -y python3-pip`
-- Posodobimmo Flask knjižnico: `python3 -m pip install flask --upgrade`
-    - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
-    - https://flask.palletsprojects.com/en/2.3.x/
+- Namestimo virtualno okolje in Flask knjižnico.: 
+    - `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno`
+    - Posodobimo seznam paketov: `sudo apt update`
+    - Namestimo Flask: `sudo apt install python3-flask`
+        - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+        - https://flask.palletsprojects.com/en/3.0.x/
 - Odpremo port `8080` na požarnem zidu, da lahko dostopamo do Flask serverja.
     - Zaženemo: `sudo ufw allow 8080`
 
 ### Zagon programa
 1. Program: `01_hello_world`:
     - V tem programu zaženemo Flask server, ki vrne "Hello World" ob obisku strani.
-    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/01_hello_world`
+    - Premik v mapo: `cd 01_hello_world`
     - Zagon: `python3 hello_world.py`
     - Obisk strani: `<IP_NAPRAVE>:8080`
+    - Ugasnite Flask server: `Ctrl+C` in se premaknimo mapo višje: `cd ..`
 
 2. Program: `02_datetime_templates`:
     - V tem programu zaženemo Flask server, ki vrne trenuten datum in čas na serverju.
-    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/02_datetime_templates`
+    - Premik v mapo: `cd 02_datetime_templates`
     - Zagon: `python3 main.py`
     - Obisk strani: `<IP_NAPRAVE>:8080`
+    - Ugasnite Flask server: `Ctrl+C` in se premaknimo mapo višje: `cd ..`
 
 3. Program: `03_GPIO_remote_control`:
-    - Povežemo 2 LED na 11 in 13 pin. S pomočjo spletnega vmesnika lahko nadzorujemo pine.
-    - Premik v mapo: `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno/03_GPIO_remote_control`
-    - Zagon: `python3 main.py`
+    - Povežemo 2 LEDici na 17 in 27 pin. S pomočjo spletnega vmesnika lahko nadzorujemo pine.
+    - Premik v mapo: `cd 03_GPIO_remote_control`
+    - Zagon: `flask --app main run --host=0.0.0.0 --port=8080`
     - Obisk strani: `<IP_NAPRAVE>:8080/interface`
+    - Ugasnite Flask server: `Ctrl+C`
+    - Gremo iz sudo na običajnega uporabnika: `exit`
 
 

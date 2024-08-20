@@ -6,3 +6,4 @@ Navodila za individualne vaje:
 - [Kamera](./kamera.md)
 - [Rainbow HAT](./rainbow_hat.md)
 - [Sense HAT](./sense_hat.md)
+- [Reaction Game](./reaction_game.md)

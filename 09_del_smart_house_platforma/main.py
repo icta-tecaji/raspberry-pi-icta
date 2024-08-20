@@ -4,44 +4,44 @@ import adafruit_dht
 from flask import Flask
 
 # Initial the dht device, with data pin connected to:
-dhtDevice = adafruit_dht.DHT11(board.D4)
+# dhtDevice = adafruit_dht.DHT11(board.D4)
 
 
-while True:
-    try:
-        # Print the values to the serial port
-        temperature_c = dhtDevice.temperature
-        temperature_f = temperature_c * (9 / 5) + 32
-        humidity = dhtDevice.humidity
-        print(
-            "Temp: {:.1f} F / {:.1f} C    Humidity: {}% ".format(
-                temperature_f, temperature_c, humidity
-            )
-        )
+# while True:
+#     try:
+#         # Print the values to the serial port
+#         temperature_c = dhtDevice.temperature
+#         temperature_f = temperature_c * (9 / 5) + 32
+#         humidity = dhtDevice.humidity
+#         print(
+#             "Temp: {:.1f} F / {:.1f} C    Humidity: {}% ".format(
+#                 temperature_f, temperature_c, humidity
+#             )
+#         )
 
-    except RuntimeError as error:
-        # Errors happen fairly often, DHT's are hard to read, just keep going
-        print(error.args[0])
-        time.sleep(2.0)
-        continue
-    except Exception as error:
-        dhtDevice.exit()
-        raise error
+#     except RuntimeError as error:
+#         # Errors happen fairly often, DHT's are hard to read, just keep going
+#         print(error.args[0])
+#         time.sleep(2.0)
+#         continue
+#     except Exception as error:
+#         dhtDevice.exit()
+#         raise error
 
-    time.sleep(2.0)
+#     time.sleep(2.0)
 
 
-# # Add webserver
-# app = Flask(__name__)
+# Add webserver
+app = Flask(__name__)
 
-# @app.route('/metrics')
-# def metrics():
-#     umid, temp = Adafruit_DHT.read_retry(sensor, sensor_pin)
-#     if umid is not None and temp is not None:
-#         return '# HELP local_temp local temperature\n# TYPE local_temp gauge\nlocal_temp {}\n# HELP local_humidity local humidity\n# TYPE local_humidity gauge\nlocal_humidity {}\n'.format(int(temp), int(umid)), 200, {'Content-Type': 'text/plain; charset=utf-8'}
-#     else:
-#         return 'Could not read from DHT11.', 200, {'Content-Type': 'text/plain; charset=utf-8'}
+@app.route('/metrics')
+def metrics():
+    umid, temp = 45, 29
+    if umid is not None and temp is not None:
+        return '# HELP local_temp local temperature\n# TYPE local_temp gauge\nlocal_temp {}\n# HELP local_humidity local humidity\n# TYPE local_humidity gauge\nlocal_humidity {}\n'.format(int(temp), int(umid)), 200, {'Content-Type': 'text/plain; charset=utf-8'}
+    else:
+        return 'Could not read from DHT11.', 200, {'Content-Type': 'text/plain; charset=utf-8'}
 
-# if __name__ == "__main__":
-#     print("running flask")
-#     app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    print("running flask")
+    app.run(host="0.0.0.0", port=5000)

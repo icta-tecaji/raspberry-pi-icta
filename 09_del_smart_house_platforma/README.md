@@ -47,8 +47,7 @@ Podatke bomo iz senzorja brali s pomočjo Python skripte `main.py`. Pred zagonom
 - `pip install Adafruit_Python_DHT`
 
 - Zaženemo program: `python3 main.py`
-
-Po zagonu bi morali na URL nalsovu `http://<RPI_IP>:5000/metrics` videti izpis trenutnih metrik.
+- Po zagonu bi morali na URL nalsovu `http://<RPI_IP>:5000/metrics` videti izpis trenutnih metrik.
 
 ## Prometheus in Grafana
 
@@ -64,8 +63,8 @@ Do nadzorne plošče lahko dostopimo na naslovu:
 - Prometheus `http://<RPI_IP>:5001/`
 - Grafana `http://<RPI_IP>:5002/`
 
-Prijavimo se v Grafana nadzorno ploščo in ustvarimo nov `Data source` (Nastavitve -> Data Sources -> Add data source -> Prometheus). Poimenujemo ga `DHT11` in dodamo URL do Prometheus-a. Izberemo gumb `Save & test`
+Prijavimo se v Grafana nadzorno ploščo in ustvarimo nov `Data source` (Connections -> Data Sources -> Add data source -> Prometheus). Poimenujemo ga `DHT11` in dodamo URL do Prometheus-a. Izberemo gumb `Save & test`
 
-Naslednji korak je prikaz izmerjenih podatkov na nadzorni plošči. Ustvarimo nov objekt `Dashboard` (Dashboards -> New Dashboard -> Add new panel) in dodamo podatke za temperaturo in vlago v ločena *panela*. Na koncu dashboard shranimo.
+Naslednji korak je prikaz izmerjenih podatkov na nadzorni plošči. Ustvarimo nov objekt `Dashboard` (Dashboards -> New Dashboard -> Add visualization) in dodamo podatke za temperaturo in vlago v ločena *panela*. Na koncu dashboard shranimo.
 
-Po končanem delu lahko zadeve odstranimo z ukazom `sudo docker compose down` in ustavimo Python skripto.
+Po končanem delu lahko zadeve odstranimo z ukazom `sudo docker compose down -v` in ustavimo Python skripto.

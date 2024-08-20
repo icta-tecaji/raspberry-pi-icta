@@ -7,3 +7,4 @@ Navodila za individualne vaje:
 - [Rainbow HAT](./rainbow_hat.md)
 - [Sense HAT](./sense_hat.md)
 - [Reaction Game](./reaction_game.md)
+- [LCD zaslon](./lcd.md)

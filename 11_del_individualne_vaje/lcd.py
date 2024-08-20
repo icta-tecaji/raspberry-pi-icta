@@ -1,28 +1,4 @@
-* https://github.com/sterlingbeason/LCD-1602-I2C
-* https://nerdcave.xyz/raspberrypi/module-and-sensors/tutorial-lcd-1602/
-* https://www.youtube.com/watch?v=V8J33fvCIUs
-
-
-
-vezava:
-* vcc -> 5v
-* gnd -> gnd
-* sda -> sda
-* scl-> scl
-
-Če nimaš, ENABLE I2C communication.
-
-Prevriš I2C naslov
-* Check for connected device addresses:
-* `sudo apt-get update`
-* `sudo apt-get install -y i2c-tools`
-* `sudo i2cdetect -y 1`
-* al je 0x27 al pa 0x3f (to dvoje sm vidu)
-
-
-Ročen library:
-```python
-import smbus
+from smbus2 import SMBus
 import time
 
 class LCD:
@@ -54,10 +30,10 @@ class LCD:
         # Open I2C interface
         if pi_rev == 2:
             # Rev 2 Pi uses 1
-            self.bus = smbus.SMBus(1)
+            self.bus = SMBus(1)
         elif pi_rev == 1:
             # Rev 1 Pi uses 0
-            self.bus = smbus.SMBus(0)
+            self.bus = SMBus(0)
         else:
             raise ValueError('pi_rev param must be 1 or 2')
 
@@ -111,19 +87,3 @@ class LCD:
     def clear(self):
         # clear LCD display
         self.lcd_byte(0x01, self.LCD_CMD)
-```
-
-KODA:
-```python
-import time
-from LCD import LCD
-
-lcd = LCD(i2c_addr=0x3f) # params available for rPi revision, I2C Address, and backlight on/off
-            # lcd = LCD(2, 0x3F, True)
-
-lcd.message("Hello World!", 1) # display 'Hello World!' on line 1 of LCD
-
-time.sleep(5) # wait 5 seconds
-
-lcd.clear() # clear LCD display
-```

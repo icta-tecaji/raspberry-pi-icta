@@ -2,13 +2,6 @@
 
 Izrazito praktična delavnica, ki predstavi zelo poceni alternativo dragim profesionalnim napravam in strežnikom, ki s širokim naborom zmožnosti rešuje probleme in najde prostor v (skoraj) vsakem okolju.
 
-## Info
-- Anketa: https://forms.gle/hc7eR4zX19Mjphwx5
-- WiFi:
-    - SSID: `FE – guest`
-    - Username: `i002`
-    - Password: `7363`
-
 ## Vsebina
 - [Del 1: Uvod v delo z RaspberryPI](./01_del_uvod_v_rpi/README.md)
 - [Del 2: Priprava okolja in prva uporaba](./02_del_priprava_okolja/README.md)

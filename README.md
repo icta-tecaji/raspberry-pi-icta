@@ -1,6 +1,10 @@
 # ICTA: Raspberry Pi
 
-Anketa: https://forms.gle/R6BaHYNbFNfGWUV77
+WiFi:
+- SSID: `rpi-delavnica`
+- Geslo: `rpi-delavnica`
+
+Anketa: https://forms.gle/vKTgJLew1eAQTkXN7
 
 Izrazito praktična delavnica, ki predstavi zelo poceni alternativo dragim profesionalnim napravam in strežnikom, ki s širokim naborom zmožnosti rešuje probleme in najde prostor v (skoraj) vsakem okolju.
 

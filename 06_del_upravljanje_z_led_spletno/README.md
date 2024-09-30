@@ -27,9 +27,18 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
 - Namestimo virtualno okolje in Flask knjižnico.: 
     - `cd ~/raspberry-pi-icta/06_del_upravljanje_z_led_spletno`
     - Posodobimo seznam paketov: `sudo apt update`
-    - Namestimo Flask: `sudo apt install python3-flask`
-        - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
-        - https://flask.palletsprojects.com/en/3.0.x/
+    - Namestimo Python venv:
+        - `sudo apt-get update`
+        - `sudo apt-get -y upgrade`
+        - `sudo apt-get install python3-pip`
+        - `sudo apt install --upgrade python3-setuptools`
+        - If you are installing on the Bookworm version of Raspberry Pi OS, you will need to install your python modules in a virtual environment:
+        - `sudo apt install python3-venv`
+        - `python3 -m venv .venv --system-site-packages`
+        - `source .venv/bin/activate`
+        - Namestimo Flask: `pip install Flask`
+            - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+            - https://flask.palletsprojects.com/en/3.0.x/
 - Odpremo port `8080` na požarnem zidu, da lahko dostopamo do Flask serverja.
     - Zaženemo: `sudo ufw allow 8080`
 
@@ -56,4 +65,4 @@ It’s useful to start enjoying GPIOs and also to debug some circuits without wr
     - Ugasnite Flask server: `Ctrl+C`
     - Gremo iz sudo na običajnega uporabnika: `exit`
 
-
+Po končanih vajah deaktiviramo virtualno okolje: `deactivate`

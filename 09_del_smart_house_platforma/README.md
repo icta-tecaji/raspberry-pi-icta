@@ -31,12 +31,7 @@ Preverimo, če je senzor pravilno povezan:
 ## Python skripta
 Podatke bomo iz senzorja brali s pomočjo Python skripte `main.py`. Pred zagonom skripte moramo namestiti dodatno knjižnico, ki nam nudi povezavo s senzorjem BMP280:
 - Premaknemo se v mapo: `cd ~/raspberry-pi-icta/09_del_smart_house_platforma`
-- `sudo apt-get update`
-- `sudo apt-get -y upgrade`
-- `sudo apt-get install python3-pip`
-- `sudo apt install --upgrade python3-setuptools`
-- If you are installing on the Bookworm version of Raspberry Pi OS, you will need to install your python modules in a virtual environment:
-    - `sudo apt install python3-venv`
+- Ustvarimo virtualno okolje: 
     - `python3 -m venv .venv --system-site-packages`
     - `source .venv/bin/activate`
 - Blinka Install:
@@ -44,8 +39,9 @@ Podatke bomo iz senzorja brali s pomočjo Python skripte `main.py`. Pred zagonom
     - `wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py`
     - `sudo -E env PATH=$PATH python3 raspi-blinka.py`
 - Reboot the Raspberry Pi: `sudo reboot`
+- Po ponovnem zagonu se premaknemo v mapo:
+    - `cd ~/raspberry-pi-icta/09_del_smart_house_platforma`
 - `rm raspi-blinka.py`
-- `cd ~/raspberry-pi-icta/09_del_smart_house_platforma`
 - `source .venv/bin/activate`
 - The script will automatically enable I2C and SPI. You can run the following command to verify: `ls /dev/i2c* /dev/spi*`
 - Installing the CircuitPython-BMP280 Library:

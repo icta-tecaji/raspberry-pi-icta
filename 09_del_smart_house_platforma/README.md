@@ -31,7 +31,13 @@ Preverimo, če je senzor pravilno povezan:
 ## Python skripta
 Podatke bomo iz senzorja brali s pomočjo Python skripte `main.py`. Pred zagonom skripte moramo namestiti dodatno knjižnico, ki nam nudi povezavo s senzorjem BMP280:
 - Premaknemo se v mapo: `cd ~/raspberry-pi-icta/09_del_smart_house_platforma`
-- Ustvarimo virtualno okolje: 
+- Namestimo Python venv:
+    - `sudo apt-get update`
+    - `sudo apt-get -y upgrade`
+    - `sudo apt-get install python3-pip`
+    - `sudo apt install --upgrade python3-setuptools`
+    - If you are installing on the Bookworm version of Raspberry Pi OS, you will need to install your python modules in a virtual environment:
+    - `sudo apt install python3-venv`
     - `python3 -m venv .venv --system-site-packages`
     - `source .venv/bin/activate`
 - Blinka Install:

@@ -10,7 +10,7 @@ services:
       - "80:80/tcp"
     environment:
       TZ: 'Europe/Ljubljana'
-      FTLCONF_webserver_api_password:: 'delavnica'
+      FTLCONF_webserver_api_password: 'delavnica'
       FTLCONF_dns_listeningMode: 'all'
     # Volumes store your data between container upgrades
     volumes:

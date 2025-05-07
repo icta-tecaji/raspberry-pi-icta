@@ -4,7 +4,7 @@ WiFi:
 - SSID: `rpi-delavnica`
 - Geslo: `rpi-delavnica`
 
-Anketa: https://forms.gle/7jm7q5PDx5qgcesw7
+Anketa: https://forms.gle/VNrttr1aAe1cYQsZA
 
 Izrazito praktična delavnica, ki predstavi zelo poceni alternativo dragim profesionalnim napravam in strežnikom, ki s širokim naborom zmožnosti rešuje probleme in najde prostor v (skoraj) vsakem okolju.
 

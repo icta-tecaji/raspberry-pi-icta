@@ -1,7 +1,7 @@
 version: "3"
 services:
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:v2.55.0
     container_name: shp_prometheus
     restart: always
     ports:
